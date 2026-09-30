@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Imposteur",
+    "name": "Imposteur Infini",
     "slug": "Imposteur",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,15 +10,66 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.imposteur.myapp",
+      "versionCode": 4,
+      "permissions": [
+        "com.android.vending.BILLING"
+      ],
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#3331C6",
         "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundImage": "./assets/android-icon-background.png"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e04f9f8-8c2d-4ca1-9d26-ee65ef18da88"
+      }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "LuckiestGuy",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf",
+                    "weight": 400
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-9919137332387976~4794014259",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "delayAppMeasurementInit": true,
+          "userTrackingUsageDescription": "Cet identifiant est utilisé pour vous proposer des publicités plus pertinentes."
+        }
+      ],
+      "expo-iap",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraProguardRules": "-keep class com.google.android.gms.internal.consent_sdk.** { *; }"
+          }
+        }
+      ],
+      "expo-localization"
+    ]
   }
 }

@@ -298,15 +298,6 @@ export default function MenuScreen({
             <Text style={styles.buttonText}>Suivant</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.privacyLink}
-            onPress={() => Linking.openURL(PRIVACY_POLICY_URL)}
-            accessibilityRole="link"
-            accessibilityLabel="Règles de confidentialité"
-          >
-            <Text style={styles.privacyLinkText}>Confidentialité</Text>
-          </TouchableOpacity>
-
           {__DEV__ ? (
             <TouchableOpacity style={styles.testButton} onPress={goToTest}>
               <Text style={styles.testButtonText}>Mode test (dev)</Text>

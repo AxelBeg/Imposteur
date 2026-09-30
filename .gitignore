@@ -32,6 +32,12 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+scripts/.env
+
+# Android signing (ne jamais committer)
+credentials.json
+credentials/
 
 # typescript
 *.tsbuildinfo
@@ -39,3 +45,8 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# cache de la matrice de similarite (regenerable via scripts/generate_similarity_data.py)
+scripts/.cache/
+__pycache__/
+*.pyc

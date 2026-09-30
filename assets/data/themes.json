@@ -1,0 +1,8 @@
+[
+  { "id": "general", "label": "Général" },
+  { "id": "animaux", "label": "Animaux" },
+  { "id": "films", "label": "Films" },
+  { "id": "nourriture", "label": "Nourriture" },
+  { "id": "metiers", "label": "Métiers" },
+  { "id": "sport", "label": "Sport" }
+]
